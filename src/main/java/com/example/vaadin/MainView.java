@@ -1,5 +1,7 @@
-package com.example.demo;
+package com.example.vaadin;
 
+import com.example.backend.DataService;
+import com.example.backend.GreetService;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -8,13 +10,18 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 
+import java.io.IOException;
+
 /**
  * The main view contains a button and a click listener.
  */
 @Route("")
 public class MainView extends VerticalLayout {
 
-    public MainView() {
+    private final DataService dataService;
+
+    public MainView(DataService dataService) throws IOException {
+        this.dataService = dataService;
         // Use TextField for standard text input
         TextField textField = new TextField("Your name");
 
@@ -36,5 +43,7 @@ public class MainView extends VerticalLayout {
         addClassName("centered-content");
 
         add(textField, button);
+
+        dataService.getData();
     }
 }

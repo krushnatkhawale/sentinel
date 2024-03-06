@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.vaadin;
 
 import com.vaadin.flow.component.page.AppShellConfigurator;
 import com.vaadin.flow.server.PWA;

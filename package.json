@@ -3,7 +3,7 @@
   "license": "UNLICENSED",
   "type": "module",
   "dependencies": {
-    "@polymer/polymer": "3.5.1",
+    "@polymer/polymer": "3.5.2",
     "@vaadin/a11y-base": "24.3.11",
     "@vaadin/accordion": "24.3.11",
     "@vaadin/app-layout": "24.3.11",
